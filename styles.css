@@ -1,6 +1,3 @@
-/* ─────────────────────────────────────────
-   CSS VARIABLES & RESET
-───────────────────────────────────────── */
 :root {
   --bg:          #f5f2ee;
   --ink:         #1c1c1c;
@@ -34,9 +31,6 @@ body {
 a { color: inherit; text-decoration: none; }
 
 
-/* ─────────────────────────────────────────
-   NAVBAR
-───────────────────────────────────────── */
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -110,9 +104,6 @@ a { color: inherit; text-decoration: none; }
 }
 
 
-/* ─────────────────────────────────────────
-   HERO
-───────────────────────────────────────── */
 .hero {
   margin-top: var(--navbar-h);
   width: 100%;
@@ -156,9 +147,6 @@ a { color: inherit; text-decoration: none; }
 }
 
 
-/* ─────────────────────────────────────────
-   PROJECTS STICKY HEADER
-───────────────────────────────────────── */
 .projects-header {
   position: sticky;
   top: var(--navbar-h);
@@ -178,9 +166,6 @@ a { color: inherit; text-decoration: none; }
 }
 
 
-/* ─────────────────────────────────────────
-   PROJECTS SECTION
-───────────────────────────────────────── */
 .projects-section {
   max-width: var(--max-w);
   margin: 0 auto;
@@ -270,7 +255,7 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
   color: var(--ink-muted);
   margin-bottom: 10px;
-  text-align: right;  /* matches wireframe: label far right on project 1 */
+  text-align: right; 
 }
 
 .project-summary-label--left {
@@ -283,12 +268,7 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 6px;
 }
 
-/* project 2 reversal is handled by DOM order in HTML */
 
-
-/* ─────────────────────────────────────────
-   CONTACT
-───────────────────────────────────────── */
 .contact-section {
   position: relative;
   max-width: var(--max-w);
@@ -340,9 +320,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 
-/* ─────────────────────────────────────────
-   RESPONSIVE (tablet / mobile)
-───────────────────────────────────────── */
+
 @media (max-width: 600px) {
   .hero { height: 220px; }
 
