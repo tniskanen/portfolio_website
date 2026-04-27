@@ -40,32 +40,31 @@
 
   
   <div class="projects-header" id="projects">
-    <h2>About</h2>
+    <h2>Contact</h2>
   </div>
 
- <section class="projects-section">
+  <h3>Let's Connect!</h3>
+  <form method="post" action="https://webdevbasics.net/scripts/pacific.php">
+    <p>Required fields are marked with an asterisk *.</p>
+    
+    <label for="myFName">*Name:</label>
+    <input type="text" id="myFName" name="myFName" required>
 
-  
-  <p>I'm passionate about using data to understand the world more clearly. From building machine learning pipelines to exploring patterns in real-world datasets, I'm driven by the intersection of curiosity and analysis.</p>
+    <label for="myEmail">*E-Mail Address:</label>
+    <input type="email" id="myEmail" name="myEmail" required>
 
-  <hr class="project-divider">
-  <span class="section-label">Education</span>
-  <p>Arizona State University — Bachelor of Science in Data Science, 2026</p>
+    <label for="myPhone">Phone Number:</label>
+    <input type="tel" id="myPhone" name="myPhone" maxlength="12">
 
-  <hr class="project-divider">
-  <span class="section-label">Experience</span>
-  <p>Package Dispatch Supervisor — UPS, 2025-Current. Coordinated daily driver operations at a high-volume UPS facility, using real-time data to optimize routes, resolve scheduling conflicts, and maintain delivery performance standards. Analyzed Excel reports to identify operational trends, built custom tracking tools to monitor performance over time, and communicated data insights to management to support decision-making.</p>
+    <label for="mySubject">Subject:</label>
+    <input type="text" id="mySubject" name="mySubject">
 
-  <hr class="project-divider">
-  <span class="section-label">Hobbies</span>
-  <p>Outside of work I stay active through high-intensity functional training and enjoy pushing myself physically on a regular basis. In the kitchen I like experimenting with different recipes and have a particular obsession with making the perfect pizza.</p>
+    <label for="myComments">*Comments:</label>
+    <textarea id="myComments" name="myComments" rows="2" cols="30"></textarea>
 
-</section>
+    <input type="submit" value="Submit">
+  </form>
 
-
-  </section>
-
-  
   <section class="contact-section" id="contact">
     <span class="contact-label">Contact</span>
     <div class="contact-buttons">
