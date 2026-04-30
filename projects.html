@@ -3,37 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
+  <meta name="description" content="Data science and analytics projects by Ty Niskanen, including research, anomaly detection, and healthcare analysis." />
+  <meta name="keywords" content="Ty Niskanen, projects, data science, machine learning, analytics" />
+  <meta name="author" content="Ty Niskanen" />
+  <title>Projects | Ty Niskanen Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body id="top">
 
 
   <nav class="navbar">
     <div class="nav-left">
-      <div class="avatar">
-        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="20" fill="#2c2c2c"/>
-          <circle cx="20" cy="16" r="7" fill="#888"/>
-          <ellipse cx="20" cy="34" rx="12" ry="8" fill="#888"/>
-        </svg>
-      </div>
-      <div class="nav-identity">
-        <span class="nav-name">Ty Niskanen</span>
-        <span class="nav-tagline">Designer &amp; Developer</span>
-      </div>
+      <a href="index.html" class="home-link" aria-label="Go to home page">
+        <div class="avatar">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M3 10.5 12 3l9 7.5v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1v-9Z" fill="#2c2c2c"/>
+          </svg>
+        </div>
+      </a>
     </div>
+    <h1 class="nav-title">Data Analyst &amp; Developer</h1>
     <ul class="nav-links">
-      <li><a href="index.html">About</a></li>
+      <li><a href="about_me.html">About</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
   
+  <main>
+
   <section class="hero" id="about">
       <img class="hero-image" src="abstract-patterns.jpg" alt="Abstract background pattern" />
   </section>
@@ -54,17 +56,22 @@
       <div class="project-body">
         <div class="project-image-wrap">
           <div class="project-image circle-image">
-            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-              <line x1="0" y1="0" x2="120" y2="120" stroke="#bbb" stroke-width="1.5"/>
-              <line x1="120" y1="0" x2="0" y2="120" stroke="#bbb" stroke-width="1.5"/>
-            </svg>
+            <img src="telomere.jpg" alt="Telomere project image" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
           </div>
         </div>
         <div class="project-text">
-          <h3 class="project-title">Project One Title</h3>
-          <p>A brief description of this project goes here. Explain the goal, your approach, and what you built or discovered. Keep it concise and compelling.</p>
-          <p>Additional detail or a second line of context can go here, supporting the main summary above.</p>
-          <p>Third supporting line of text for further elaboration on results or technologies used.</p>
+          <h3 class="project-title">Data Science Capstone: Exploring NHANES Data for the Primary Drivers
+                                    Behind Biological Aging</h3>
+          <span class="section-label">Summary</span>
+          <p>For my data science capstone, my team investigated the socioeconomic and clinical drivers of leukocyte telomere length, a biomarker of biological aging, using the NHANES 1999-2002 dataset.</p>
+          <p>We built a machine learning pipeline to model how demographic and health-related variables predict telomere length, and paired the analysis with a full research paper.</p>
+          <p>The project demonstrated my ability to combine rigorous statistical methodology with scientific communication, producing work grounded in peer-reviewed sources and framed for an academic audience.</p>
+
+          <span class="section-label" style="margin-top: 16px;">Packages Used</span>
+          <p>pandas, numpy, matplotlib, seaborn, scipy, scikit-learn, statsmodels, kmodes</p>
+
+          <span class="section-label" style="margin-top: 16px;">Repository</span>
+          <p><a class="repo-link" href="https://github.com/electronic-memory-44/telomere-project-dat490" target="_blank">Repo</a></p>
         </div>
       </div>
     </div>
@@ -78,33 +85,72 @@
       </div>
       <div class="project-body">
         <div class="project-text">
-          <h3 class="project-title">Project Two Title</h3>
-          <p>A brief description of this second project goes here. Explain what problem you solved and why it matters.</p>
-          <p>Further detail on methodology, tools used, or key outcomes from this project.</p>
-          <p>A third line wrapping around the image to match the wireframe layout pattern.</p>
+          <h3 class="project-title">Detecting Anomalies in Emergency Service Call Data</h3>
+          <span class="section-label">Summary</span>
+          <p>I applied unsupervised anomaly detection to emergency service call data from Tempe, Arizona, aggregating records by week and postal code to identify unusual patterns in call volume and type distribution.</p>
+          <p>I engineered a 44-feature dataset, synthetically injected anomalies to create labeled validation sets, and used a full factorial design across four Isolation Forest hyperparameters to optimize ROC-AUC performance.</p>
+          <p>After selecting the best model configuration, I applied SHAP values to the most anomalous test samples to quantify each feature's contribution, revealing that spikes in specific call type percentages were the primary drivers of anomalous weeks, validated through comparative visualizations against baseline weekly trends.</p>
+
+          <span class="section-label" style="margin-top: 16px;">Packages Used</span>
+          <p>pandas, numpy, matplotlib, seaborn, scikit-learn, statsmodels, shap, itertools</p>
+
+          <span class="section-label" style="margin-top: 16px;">Repository</span>
+          <p><a class="repo-link" href="https://github.com/tniskanen/Tempe_service_calls" target="_blank">Repo</a></p>
         </div>
         <div class="project-image-wrap">
           <div class="project-image circle-image">
-            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-              <line x1="0" y1="0" x2="120" y2="120" stroke="#bbb" stroke-width="1.5"/>
-              <line x1="120" y1="0" x2="0" y2="120" stroke="#bbb" stroke-width="1.5"/>
-            </svg>
+            <img src="service_icon.png" alt="Service project image" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-divider"></div>
+
+    <div class="project project--left">
+      <div class="project-subheader">
+        <span class="tag">Data Analysis</span>
+      </div>
+      <div class="project-body">
+        <div class="project-image-wrap">
+          <div class="project-image circle-image">
+            <img src="healthcare2.webp" alt="Healthcare project image" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+        </div>
+        <div class="project-text">
+          <h3 class="project-title">Healthcare Access Index</h3>
+          <span class="section-label">Summary</span>
+          <p>I built a state-level Healthcare Access Index using 2018 county-level data from the Area Health Resources File (AHRF), analyzing how structural, financial, and utilization factors relate to health outcomes across the United States.</p>
+          <p>I engineered features across four analytical dimensions: financial barriers (uninsured rates, per capita income, Medicaid coverage), structural barriers (hospital beds, rural health clinics, federally qualified health centers normalized per capita using PCA), utilization (ED visits, admissions, outpatient visits, and surgical operations per 1,000 residents), and outcomes (mortality rate, hospital readmission rate, life expectancy, and infant mortality), integrating data from AHRF, KFF, and CDC sources.</p>
+          <p>Correlation analysis and choropleth visualizations revealed geographic patterns in access disparities across states, linking lower structural capacity and higher uninsured rates to worse health outcomes, providing a data-driven framework for identifying underserved regions at the state level.</p>
+
+          <span class="section-label" style="margin-top: 16px;">Packages Used</span>
+          <p>pandas, numpy, matplotlib, seaborn, scipy, scikit-learn, geopandas</p>
+
+          <span class="section-label" style="margin-top: 16px;">Repository</span>
+          <p><a class="repo-link" href="https://github.com/tniskanen/HealthCare_Access_Index" target="_blank">Repo</a></p>
         </div>
       </div>
     </div>
 
   </section>
 
-  
-  <section class="contact-section" id="contact">
-    <span class="contact-label">Contact</span>
-    <div class="contact-buttons">
-      <a href="mailto:you@example.com" class="contact-btn">Email</a>
-      <a href="https://linkedin.com" target="_blank" class="contact-btn">LinkedIn</a>
-      <a href="https://github.com" target="_blank" class="contact-btn">GitHub</a>
-    </div>
-  </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-links">
+      <a href="mailto:your.niskanenty24@gmail.com">Email</a>
+      <span>|</span>
+      <a href="https://github.com/tniskanen" target="_blank">GitHub</a>
+      <span>|</span>
+      <a href="https://www.linkedin.com/in/ty-niskanen-a28593407/" target="_blank">LinkedIn</a>
+      <span>|</span>
+      <a href="resume.pdf" target="_blank">Resume</a>
+      <span>|</span>
+      <a href="#top">Back to top</a>
+    </p>
+    <p class="footer-copy">&copy; 2026 Ty Niskanen</p>
+  </footer>
 
 </body>
 </html>
